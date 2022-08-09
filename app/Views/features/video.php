@@ -21,6 +21,7 @@
                     </div>
                 </div>
                 <p class="lead"><?php echo $video['description'] ?></p>
+                <p class="lead">Uploaded by:<a href="/user/<?php echo $video['userID']?>" style="text-decoration: none"> <?php echo $video['firstName'] . " " . $video['lastName']; ?></a></p>
             </div>
             <div class="col-md-4">
                 <div class="container mt-5">

@@ -31,4 +31,12 @@ class VideoModel extends Model
 
         return $this->db->query($query)->getResultArray();
     }
+
+    public function getVideo($id)
+    {
+        $query = "select v.id, v.userID, v.title, v.description, v.category, v.videoLocation, u.firstName, u.lastName from video v join user u on v.userID = u.id where v.id = " . $id;
+
+        return $this->db->query($query)->getRowArray();
+
+    }
 }

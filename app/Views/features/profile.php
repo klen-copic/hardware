@@ -116,6 +116,9 @@
                                                             <a class="btn btn-outline-dark mt-auto"
                                                                href="/video/<?php echo $video['id'] ?>">View
                                                                 video</a>
+                                                            <button class="btn btn-danger delete mt-2"
+                                                                    id="video_<?php echo $video['id'] ?>">Delete
+                                                            </button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -205,5 +208,32 @@
 
         });
 
+    });
+
+    $('.delete').click(function () {
+
+        if (confirm("Are you sure you want to delete this video?") === true) {
+
+            const id = $(this).attr('id')
+            const splitID = id.split('_');
+
+            const videoID = splitID[1];
+            $.ajax({
+                type: 'post',
+                url: '/features/deleteVideo',
+                data: {id: videoID},
+                success: function (response) {
+                    if (response === "ok") {
+                        alert("Video deleted!");
+                        location.reload()
+                    } else {
+                        alert("Error!");
+                    }
+                },
+                error: function (result) {
+                    $('body').html("err");
+                },
+            });
+        }
     });
 </script>

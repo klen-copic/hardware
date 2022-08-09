@@ -37,6 +37,8 @@ $routes->set404Override();
 // route since we don't have to scan directories.
 
 $routes->get('/', 'Pages::index');
+$routes->match(['get', 'post'], 'features/deleteVideo', 'Features::deleteVideo',['filter' => 'auth']);
+$routes->get('/user/(:any)', 'Features::user/$1', ['filter' => 'auth']);
 $routes->match(['get','post'],'features/filter','Features::filterVideos',['filter' => 'auth']);
 $routes->match(['get','post'],'features/search','Features::searchVideos',['filter' => 'auth']);
 $routes->match(['get','post'],'features/postComment','Features::postComment',['filter' => 'auth']);

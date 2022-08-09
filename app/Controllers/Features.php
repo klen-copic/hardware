@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\CommentModel;
 use App\Models\RatingModel;
+use App\Models\UserModel;
 use App\Models\VideoModel;
 
 class Features extends BaseController
@@ -53,8 +54,7 @@ class Features extends BaseController
             $avg += $rating['averageRating'];
         }
 
-        $data['averageRating'] = $avg / $data['totalVideos'];
-        ;
+        $data['averageRating'] = $avg / $data['totalVideos'];;
 
         $data['title'] = 'Profile Page';
         echo view('templates/header', $data);
@@ -116,10 +116,11 @@ class Features extends BaseController
         }
     }
 
-    public function view($id) {
+    public function view($id)
+    {
 
         $videoModel = new VideoModel();
-        $video = $videoModel->where('id', $id)->first();
+        $video = $videoModel->getVideo($id);
         $data = [
             'video' => $video
         ];
@@ -179,7 +180,8 @@ class Features extends BaseController
         return "ok";
     }
 
-    public function filterVideos(){
+    public function filterVideos()
+    {
 
         $videoModel = new VideoModel();
         $category = strtolower($this->request->getVar('filter'));
@@ -190,7 +192,8 @@ class Features extends BaseController
         echo $response;
     }
 
-    public function searchVideos() {
+    public function searchVideos()
+    {
 
         $videoModel = new VideoModel();
         $keyword = $this->request->getVar('text');
@@ -202,4 +205,38 @@ class Features extends BaseController
 
     }
 
+    public function user($id) {
+
+        $videoModel = new VideoModel();
+        $videos = $videoModel->where('userID', $id)->findAll();
+
+        $userModel = new UserModel();
+
+        $user = $userModel->select('firstName, lastName, phoneNumber, email')->where('id', $id)->first();
+
+        $data = [
+            'videos' => $videos,
+            'user' => $user
+        ];
+
+        $data['title'] = $user['firstName'] . ' ' . $user['lastName'];
+        echo view('templates/header', $data);
+        echo view('features/user', $data);
+        echo view('templates/footer');
+
+    }
+
+    public function deleteVideo()
+    {
+        $videoModel = new VideoModel();
+
+        $id = $this->request->getVar('id');
+
+        $name = $videoModel->where("id", $id)->first()['videoLocation'];
+
+        unlink('uploads/' . $name);
+
+        $videoModel->where('id', $id)->delete();
+        return "ok";
+    }
 }

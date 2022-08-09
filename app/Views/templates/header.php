@@ -17,6 +17,7 @@
     <script src="https://cdn.jsdelivr.net/gh/kartik-v/bootstrap-star-rating@4.1.2/js/star-rating.min.js"
             type="text/javascript"></script>
     <script src="https://kit.fontawesome.com/062265acee.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 </head>
 <body>
 

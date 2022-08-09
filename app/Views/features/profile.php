@@ -16,7 +16,6 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <p class="text-muted mb-0"><?php echo session()->get('firstName') ?>
-                                        <a class="float-end"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -27,7 +26,6 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <p class="text-muted mb-0"><?php echo session()->get('lastName') ?>
-                                        <a class="float-end"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -38,7 +36,6 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <p class="text-muted mb-0"><?php echo session()->get('email') ?>
-                                        <a class="float-end"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </p>
                                 </div>
                             </div>
@@ -49,11 +46,15 @@
                                 </div>
                                 <div class="col-sm-8">
                                     <p class="text-muted mb-0"><?php echo session()->get('phoneNumber') ?>
-                                        <a class="float-end"><i class="fa-solid fa-pen-to-square"></i></a>
                                     </p>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="text-center p-4">
+                        <button class="btn btn-primary" data-bs-toggle="modal"
+                                data-bs-target="#editData">Edit Data
+                        </button>
                     </div>
                 </div>
             </div>
@@ -116,6 +117,8 @@
                                                             <a class="btn btn-outline-dark mt-auto"
                                                                href="/video/<?php echo $video['id'] ?>">View
                                                                 video</a>
+                                                        </div>
+                                                        <div class="text-center">
                                                             <button class="btn btn-danger delete mt-2"
                                                                     id="video_<?php echo $video['id'] ?>">Delete
                                                             </button>
@@ -180,6 +183,7 @@
     </div>
 </div>
 
+
 <script>
     $(function () {
 
@@ -236,4 +240,5 @@
             });
         }
     });
+
 </script>

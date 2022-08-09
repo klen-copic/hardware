@@ -54,7 +54,11 @@ class Features extends BaseController
             $avg += $rating['averageRating'];
         }
 
-        $data['averageRating'] = $avg / $data['totalVideos'];;
+        $data['averageRating'] = $avg / $data['totalVideos'];
+
+        $userModel = new UserModel();
+
+        $data['user'] = $userModel->find(session()->get('id'));
 
         $data['title'] = 'Profile Page';
         echo view('templates/header', $data);

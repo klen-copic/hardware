@@ -67,9 +67,11 @@
                                 <div class="row">
                                     <div class="col md-2">
                                         <h6>Number of posted videos</h6>
+                                        <h1><?php echo $totalVideos ?></h1>
                                     </div>
                                     <div class="col md-2">
                                         <h6>Average rating per video</h6>
+                                        <h1><?php echo $averageRating ?></h1>
                                     </div>
                                     <div class="col md-2">
                                         <button class="btn btn-primary" data-bs-toggle="modal"

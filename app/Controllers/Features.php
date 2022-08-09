@@ -38,6 +38,24 @@ class Features extends BaseController
 
         $videoModel = new VideoModel();
         $data['videos'] = $videoModel->where('userID', session()->get('id'))->findAll();
+
+        $ratingModel = new RatingModel();
+
+        //find total number of uploaded videos
+        $data['totalVideos'] = $videoModel->where('userID', session()->get('id'))->countAllResults();
+
+        //find total number of ratings
+        $avgRatings = $ratingModel->averagePerVideo(session()->get('id'));
+
+        $avg = 0;
+
+        foreach ($avgRatings as &$rating) {
+            $avg += $rating['averageRating'];
+        }
+
+        $data['averageRating'] = $avg / $data['totalVideos'];
+        ;
+
         $data['title'] = 'Profile Page';
         echo view('templates/header', $data);
         echo view('features/profile', $data);

@@ -34,4 +34,11 @@ class RatingModel extends Model{
         }
         return $rating;
     }
+
+    public function averagePerVideo($userID) {
+
+        $query = 'SELECT videoID, AVG(stars) AS averageRating FROM rating WHERE userID = ' . $userID . ' GROUP BY videoID';
+        $result = $this->db->query($query)->getResultArray();
+        return $result;
+    }
 }

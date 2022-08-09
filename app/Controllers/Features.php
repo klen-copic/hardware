@@ -50,11 +50,14 @@ class Features extends BaseController
 
         $avg = 0;
 
-        foreach ($avgRatings as &$rating) {
-            $avg += $rating['averageRating'];
+        if ($data['totalVideos'] === 0) {
+            $data['averageRating'] = 0;
+        } else {
+            foreach ($avgRatings as &$rating) {
+                $avg += $rating['averageRating'];
+            }
+            $data['averageRating'] = $avg / $data['totalVideos'];
         }
-
-        $data['averageRating'] = $avg / $data['totalVideos'];
 
         $userModel = new UserModel();
 

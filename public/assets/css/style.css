@@ -292,3 +292,35 @@
 .mb-1-6, .my-1-6 {
     margin-bottom: 1.6rem;
 }
+#footerText {
+    font-size: 15px;
+    font-weight: bold;
+
+}
+#welcomeMain{
+    font-size: 45px;
+    font-weight: bold;
+    color: #ffffff;
+}
+#welcomeText{
+    font-size: 22px;
+    
+    color: black;
+
+}
+#pagesText {
+      font-weight: bold;
+      font-size: 18px;
+      color: #ffffff;
+}
+#logo{
+    height: 50px;
+}
+#logo2{
+    height: 300px;
+}
+
+#aboutText {
+    text-align: center;
+    font-size: 23px;
+}

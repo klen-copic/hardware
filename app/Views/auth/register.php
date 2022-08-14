@@ -1,4 +1,4 @@
-<section class="vh-100 gradient-custom" style="background-color: #9A616D;">
+<section class="vh-100 gradient-custom" style="background-color: #10ccf4;">
     <div class="container py-5 h-100">
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-xl-10">

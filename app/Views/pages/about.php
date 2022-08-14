@@ -1,4 +1,4 @@
-<header class="bg-dark py-5">
+<header class="bg-info py-5">
     <div class="container px-4 px-lg-5 my-5">
         <div class="text-center text-white">
             <h1 class="display-4 fw-bolder">About Us</h1>
@@ -7,45 +7,10 @@
 </header>
 <section>
     <div class="container">
-        <div class="row" >
-            <div class="history-wrapper">
-                <div class="title-wrap text-center one-of-two">
-                    <h2 class="h1 text-secondary mb-0 text-uppercase">Bootdey.com</h2>
-                    <p class="fs-3 font-weight-500">Bootstrap snippet</p>
-                </div>
-                <div class="timeline-box one-of-two">
-                    <img class="mb-1-6 rounded" src="https://via.placeholder.com/280x280/87CEFA/000000" alt="...">
-                    <div class="content">
-                        <h3 class="h4 mb-2 mb-md-3">Start with small space</h3>
-                        <p class="mb-0">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
-                    </div>
-                    <div class="year">1995</div>
-                </div>
-                <div class="timeline-box one-of-two">
-                    <img class="mb-1-6 rounded" src="https://via.placeholder.com/280x280/FF7F50/000000" alt="...">
-                    <div class="content">
-                        <h3 class="h4 mb-2 mb-md-3">Increase employee by 6 members</h3>
-                        <p class="mb-0">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
-                    </div>
-                    <div class="year">2003</div>
-                </div>
-                <div class="timeline-box one-of-two">
-                    <img class="mb-1-6 rounded" src="https://via.placeholder.com/280x280/008B8B/000000" alt="...">
-                    <div class="content">
-                        <h3 class="h4 mb-2 mb-md-3">We win the national awards</h3>
-                        <p class="mb-0">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
-                    </div>
-                    <div class="year">2018</div>
-                </div>
-                <div class="timeline-box one-of-two">
-                    <img class="mb-1-6 rounded" src="https://via.placeholder.com/280x280/00CED1/000000" alt="...">
-                    <div class="content">
-                        <h3 class="h4 mb-2 mb-md-3">Branches open in International</h3>
-                        <p class="mb-0">Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum</p>
-                    </div>
-                    <div class="year">2021</div>
-                </div>
-            </div>
-        </div>
+       <p id="aboutText">
+        This webpage provieds information on computer hardware components, their functionalities, why they important, and how each one of them effects your computer overall. It was made as a projcet for my course Information systems, I hope you find it helpful and easy to understand. <br><br>
+        At the present time nearly everyone has access to a computer, whether that be a smartphone, a tablet, a laptop or a PC. The computer has proven itself as the most useful and revolutionary invention man has ever crated. As a matter of fact some type of a computer can be found in all electronics we use in our day to day lives.<br>
+        A part of what makes a computer live is its hardware. Hardware as a term implies the physical parts of the computer, such as GPU, CPU, power unit and many more. With extensive use of the computer some hardware components may fail and malfunction, which consecutively will lead to the computer cease to function. Getting these malfunctioning or broken components fixed can be very expensive, even replacing the damaged components with a newly bought ones can be expensive. The question the arises why pay an expensive fee to get these components fixed or changed when you could do it yourself just by watching one to two videos.
+        </p>
     </div>
 </section>
